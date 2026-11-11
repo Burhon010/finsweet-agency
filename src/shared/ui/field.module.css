@@ -1,0 +1,116 @@
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.control {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-dark);
+  transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+}
+
+.control::placeholder {
+  color: var(--color-dark);
+  opacity: 0.4;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.underline .label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--color-dark);
+  opacity: 0.6;
+}
+
+.underline .control {
+  padding: 4px 0 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border-bottom: 1px solid rgba(35, 37, 54, 0.2);
+}
+
+.underline .control::placeholder {
+  opacity: 0.87;
+}
+
+.underline .textarea::placeholder {
+  opacity: 0.4;
+}
+
+.underline .control:focus {
+  border-bottom-color: var(--color-primary);
+}
+
+.underline .textarea {
+  min-height: 60px;
+}
+
+.filled .control {
+  min-height: 96px;
+  padding: 36px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: var(--color-bg-input);
+  border: 1px solid transparent;
+}
+
+.filled .control::placeholder {
+  opacity: 0.87;
+}
+
+.filled .control:focus {
+  border-color: var(--color-secondary);
+  background: var(--color-white);
+}
+
+.filled .textarea {
+  min-height: 224px;
+  padding-top: 24px;
+}
+
+.plain .control {
+  height: 64px;
+  padding: 20px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  background: var(--color-white);
+}
+
+.invalid .control {
+  border-color: #e5484d;
+}
+
+.underline.invalid .control {
+  border-bottom-color: #e5484d;
+}
+
+.error {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #e5484d;
+}
+
+@media (max-width: 768px) {
+  .filled .control {
+    min-height: 64px;
+    padding: 20px 24px;
+  }
+
+  .filled .textarea {
+    min-height: 160px;
+  }
+}

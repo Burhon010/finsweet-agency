@@ -1,0 +1,20 @@
+.badge {
+  display: block;
+  flex-shrink: 0;
+}
+
+.blue {
+  background: var(--color-secondary);
+}
+
+.primary {
+  background: var(--color-primary);
+}
+
+.peach {
+  background: var(--color-peach);
+}
+
+.muted {
+  background: rgba(255, 255, 255, 0.06);
+}

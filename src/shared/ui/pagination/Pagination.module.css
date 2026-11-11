@@ -1,0 +1,39 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.list {
+  display: flex;
+  gap: 8px;
+}
+
+.page,
+.arrow {
+  display: grid;
+  place-items: center;
+  min-width: 48px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-dark);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.page:hover,
+.arrow:hover:not(:disabled) {
+  background: var(--color-peach-light);
+}
+
+.active,
+.active:hover {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.arrow:disabled {
+  cursor: default;
+  opacity: 0.3;
+}

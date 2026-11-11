@@ -1,0 +1,68 @@
+.section {
+  padding-top: var(--section-py);
+}
+
+.flush {
+  padding-top: 0;
+}
+
+.box {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 488px) minmax(0, 454px);
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  min-height: 333px;
+  padding: 96px 120px 96px 96px;
+  background: var(--color-secondary);
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  background: linear-gradient(
+    180deg,
+    var(--color-orange) 0 23%,
+    var(--color-peach) 23% 81.5%,
+    var(--color-primary) 81.5% 100%
+  );
+}
+
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 89px;
+  height: 80px;
+}
+
+.title {
+  margin-top: 13px;
+}
+
+@media (max-width: 1024px) {
+  .box {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 88px 64px 72px;
+  }
+}
+
+@media (max-width: 576px) {
+  .box {
+    padding: 72px 36px 56px 24px;
+  }
+
+  .box::after {
+    width: 12px;
+  }
+
+  .shape {
+    width: 56px;
+    height: 50px;
+  }
+}

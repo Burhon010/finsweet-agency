@@ -1,0 +1,19 @@
+.tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-dark);
+  opacity: 0.6;
+}
+
+.tags li {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tags span + span::before {
+  content: '·';
+  margin: 0 4px;
+}

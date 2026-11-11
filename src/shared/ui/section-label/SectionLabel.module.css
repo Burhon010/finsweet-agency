@@ -1,0 +1,29 @@
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  opacity: 0.87;
+}
+
+.light {
+  color: var(--color-white);
+  opacity: 1;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .label {
+    font-size: 12px;
+    letter-spacing: 2.4px;
+  }
+}

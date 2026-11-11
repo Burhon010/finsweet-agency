@@ -1,0 +1,81 @@
+.form {
+  position: relative;
+  width: 100%;
+  max-width: 454px;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  height: 64px;
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 20px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--color-dark);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--color-dark);
+  opacity: 0.4;
+}
+
+.button {
+  flex-shrink: 0;
+  width: 144px;
+  margin-right: -144px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-dark);
+  background: var(--color-peach);
+  opacity: 0;
+  transition: margin-right 0.3s ease, opacity 0.3s ease, background-color var(--transition);
+}
+
+.active .button {
+  margin-right: 0;
+  opacity: 1;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--color-orange);
+}
+
+.row:focus-within {
+  outline: 2px solid var(--color-peach);
+  outline-offset: 2px;
+}
+
+.message {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+@media (max-width: 576px) {
+  .row {
+    height: 56px;
+  }
+
+  .input {
+    padding: 16px 20px;
+  }
+
+  .button {
+    width: 120px;
+    margin-right: -120px;
+  }
+}

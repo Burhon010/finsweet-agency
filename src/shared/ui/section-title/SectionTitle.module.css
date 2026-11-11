@@ -1,0 +1,37 @@
+.title {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.xl {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+}
+
+.lg {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+}
+
+.md {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+}
+
+.sm {
+  font-size: var(--fs-h4);
+  line-height: var(--lh-h4);
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.light {
+  color: var(--color-white);
+}

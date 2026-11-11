@@ -1,0 +1,27 @@
+.form {
+  width: 100%;
+  max-width: 406px;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.submit {
+  margin-top: 56px;
+}
+
+.success {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a9d5b;
+}
+
+@media (max-width: 1024px) {
+  .form {
+    max-width: none;
+  }
+}

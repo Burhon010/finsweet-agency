@@ -1,0 +1,49 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  height: var(--header-height);
+  background: var(--color-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: box-shadow var(--transition);
+}
+
+.scrolled {
+  box-shadow: 0 12px 32px -16px rgba(0, 0, 0, 0.5);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  height: 100%;
+}
+
+.logo {
+  display: inline-flex;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.2px;
+  color: var(--color-white);
+}
+
+.logo span {
+  margin-right: 1px;
+  font-weight: 700;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}

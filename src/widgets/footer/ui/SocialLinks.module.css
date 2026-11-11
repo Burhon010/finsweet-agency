@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.link {
+  display: block;
+  color: var(--color-dark);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.link:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.light .link {
+  color: var(--color-white);
+}
+
+.light .link:hover {
+  color: var(--color-peach);
+}

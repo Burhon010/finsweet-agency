@@ -1,0 +1,84 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--color-dark);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 48px;
+  color: var(--color-white);
+  background: rgba(35, 37, 54, 0.85);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card:hover .overlay,
+.card:focus-within .overlay {
+  opacity: 1;
+}
+
+.card:hover .photo {
+  transform: scale(1.06);
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.role {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 0.8;
+}
+
+.socials {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.socials a {
+  display: block;
+  transition: color var(--transition);
+}
+
+.socials a:hover {
+  color: var(--color-orange);
+}
+
+@media (hover: none) {
+  .overlay {
+    opacity: 1;
+    background: linear-gradient(180deg, rgba(35, 37, 54, 0) 35%, rgba(35, 37, 54, 0.9) 100%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .overlay {
+    padding: 24px;
+  }
+}

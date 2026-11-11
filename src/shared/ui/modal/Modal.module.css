@@ -1,0 +1,52 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px 16px;
+  overflow-y: auto;
+  background: rgba(35, 37, 54, 0.72);
+  animation: fadeIn 0.25s ease both;
+}
+
+.dialog {
+  position: relative;
+  width: 100%;
+  max-width: 914px;
+  margin: auto 0;
+  padding: 136px 128px 104px;
+  background: var(--color-white);
+  outline: none;
+  animation: scaleIn 0.3s ease both;
+}
+
+.close {
+  position: absolute;
+  top: 48px;
+  right: 56px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-white);
+  background: var(--color-dark);
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.close:hover {
+  background: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .dialog {
+    padding: 88px 24px 48px;
+  }
+
+  .close {
+    top: 24px;
+    right: 24px;
+  }
+}

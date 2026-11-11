@@ -1,0 +1,45 @@
+.section {
+  padding-bottom: var(--section-py);
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
+.box {
+  padding: 56px 77px 76px;
+  background: var(--color-bg-cyan);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.item {
+  animation: scaleIn 0.4s ease both;
+}
+
+@media (max-width: 1200px) {
+  .box {
+    padding: 48px 40px 56px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .box {
+    padding: 32px 16px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+}

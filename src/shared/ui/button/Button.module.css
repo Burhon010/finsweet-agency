@@ -1,0 +1,96 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  white-space: nowrap;
+  transition: background-color var(--transition), color var(--transition), box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.label {
+  position: relative;
+}
+
+.arrow {
+  flex-shrink: 0;
+  transition: transform var(--transition);
+}
+
+.button:hover:not(:disabled) .arrow {
+  transform: translateX(4px);
+}
+
+.shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  pointer-events: none;
+  transition: transform var(--transition);
+}
+
+.button:hover:not(:disabled) .shape {
+  transform: translate(-4px, -4px);
+}
+
+.primary {
+  min-height: 64px;
+  padding: 20px 32px;
+  color: rgba(255, 255, 255, 0.87);
+  background: var(--color-primary);
+}
+
+.primary:hover:not(:disabled) {
+  color: var(--color-white);
+  background: var(--color-primary-hover);
+  box-shadow: 0 16px 32px -16px rgba(68, 76, 252, 0.7);
+}
+
+.secondary {
+  min-height: 64px;
+  padding: 20px 32px;
+  color: var(--color-dark);
+  background: var(--color-peach);
+}
+
+.secondary:hover:not(:disabled) {
+  background: var(--color-orange);
+}
+
+.link {
+  gap: 12px;
+  padding: 0;
+  color: var(--color-primary);
+  opacity: 0.87;
+}
+
+.link .arrow {
+  color: var(--color-dark);
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.full {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .primary,
+  .secondary {
+    min-height: 56px;
+    padding: 16px 24px;
+  }
+}

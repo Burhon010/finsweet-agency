@@ -1,0 +1,42 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-dark);
+  background: var(--color-white);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.chip:hover {
+  background: var(--color-peach-light);
+}
+
+.count {
+  min-width: 22px;
+  padding: 0 6px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  background: var(--color-bg-cyan);
+}
+
+.active,
+.active:hover {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.active .count {
+  background: rgba(255, 255, 255, 0.2);
+}

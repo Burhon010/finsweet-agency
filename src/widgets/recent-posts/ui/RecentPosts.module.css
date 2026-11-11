@@ -1,0 +1,22 @@
+.section {
+  padding: 102px 0 var(--section-py);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 58px;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding-top: var(--section-py);
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+}

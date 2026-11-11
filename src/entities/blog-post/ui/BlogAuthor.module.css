@@ -1,0 +1,58 @@
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-dark);
+}
+
+.small {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-dark);
+  opacity: 0.6;
+}
+
+.inline {
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.inline .name {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: -4px;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(35, 37, 54, 0.2);
+}
+
+.date {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-dark);
+  opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+  .inline .divider {
+    display: none;
+  }
+
+  .inline .date {
+    flex-basis: 100%;
+  }
+}
